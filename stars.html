@@ -3,49 +3,15 @@
 <title>MyTab-收藏夹</title>
 <meta charset="UTF-8">
 </head>
-<style>
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-.active, .collapsible:hover {
-  background-color: #ccc;
-}
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
 <body>
 <h1>⭐收藏夹</h1>
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
-<button type="button" class="collapsible">社交网站</button>
-<div class="content">
-  <a href="http://dcms.net.cn/">DCMS社交网站</a>
+<div id="social">
+  <p>社交网站</p>
+  <p><a href="http://dcms.net.cn/">DCMS社交网站</a></p>
+  <p><a href="http://3gqqjy.com/">QQ家园网</a></p>
+</div>
+<div id="disk">
+  <p>云端存储</p>
 </div>
 </body>  
 </html>
