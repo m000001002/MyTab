@@ -1,6 +1,33 @@
 <html>
 <head>
 <title>MyTab-首页</title>
-<meta charset=UTF-8>
+<meta charset="UTF-8">
 </head>
+<body>
+<script>
+    function settime(){
+        document.getElementById("time").innerHTML=Date();
+    }
+    function search(){
+        text=document.getElementById('word').value
+        sel=document.getElementById('sel').value
+        if (sel=="百度"){
+            window.location.href="https://m.baidu.com/ssid=437c44446775616e61g7f7901000000/pu=sz%401321_480/s?word="+text+"&sa=tb&rsv_t=d95dhPCpj78t1Bvj2sWloASzte0KHW03KGid2%2FkYKbzLdXbiSEfw";
+        }
+        else if (sel=="易查"){
+            window.location.href="http://page.yicha.cn/tp/s.y?key="+text+"&site=&at=i_box"
+        }
+        else if (sel=="青蛙"){
+            window.location.href="http://frogfind.com/?q="+text
+        }
+    }
+</script>
+    <select id="sel">
+        <option>百度</option>
+        <option>易查</option>
+        <option>青蛙</option>
+    </select>
+    <input type="text" maxlength="64" size="17" id="word">
+    <input style=color:red type="submit" value="搜索" class="search" onclick=search()>
+</body>  
 </html>
